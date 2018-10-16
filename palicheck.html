@@ -1,0 +1,33 @@
+<!-- this code is to do trials on HTML and JavaScript -->
+<!-- this will be saved in GITHUB.com  eventually -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title> trial page </title>
+  <meta charset="utf-8">
+
+</head>
+<body style="background-color:black;">
+  <h1 style="color:white;"> Hello, there</h1>
+  <button id="bt" type="button"> Press this button </button>
+  <script> <!-- this is JavaScript here inside <script> -->
+  alert("Welcome to this page!");
+  document.getElementById("bt").addEventListener("click", function(){
+    console.log("Kahe button press kiye ho, ka soche, sardar khus hoga!!!")
+    let input = prompt("Please provide input for Palindrome check")
+    let palicheckop=input.split("").reverse().join("")
+    if (input===palicheckop ) {
+      console.log("its a palindrome")
+      document.getElementById("theresult").innerHTML=
+      "its a palindrome"
+    } else {
+      console.log("not a palindrome")
+      document.getElementById("theresult").innerHTML=
+      "its not a palindrome"
+    }
+  });
+  </script>
+  <h2 style="color:white;"> The Result of Palindrome Test</h2>
+  <p style="color:white;" id="theresult"> </p>
+</body>
+</html>
